@@ -1,0 +1,334 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.sidebar-icon{
+    width: 1.3rem;
+    height: auto;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+.wrapper{
+    padding: 1.5rem 1rem;
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+.fa-youtube{
+    color: #ff0000;
+    font-size: 1.5rem;
+}
+
+i{
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+a.youtube-icon h3{
+    color: #282828;
+}
+
+.youtube-icon{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.youtube-logo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.youtube-header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .1rem solid #282828;
+    padding: 1rem 0;
+    gap: 1rem;
+}
+
+
+.search-input{
+    padding: .5rem;
+    border-radius: 1rem;
+    outline: none;
+    border: .17rem solid #282828;
+    display: none;
+    width: 100%;
+}
+
+.search-input::placeholder{
+    font-family: 'Poppins';
+}
+
+
+.btn-search{
+    background-color: transparent;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    border: none;
+}
+
+.btn-search:hover{
+    background-color: #2828282c;
+    transition: all .5s;
+}
+
+.youtube-search-container{
+    display: flex;
+    align-items: center;
+    flex: 2;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.microphone{
+    background-color: #2828282c;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.user-picture img{
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.youtube-icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+
+.youtube-icons a{
+    text-decoration: none;
+}
+
+.youtube-icons a i{
+    color: #282828;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input.shown{
+    display: initial;
+}
+
+@media (max-width: 767px) {
+    /* Styles for mobile devices */
+    div.youtube-icons.youtube-icons-close{
+        transform: translateX(200px);
+        display: none;
+        transition: all 1S ease-in-out;
+    }
+
+    .fa-youtube{
+        font-size: 1.8rem;
+    }
+    
+    i{
+        font-size: 1.3rem;
+    }
+}
+  
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Styles for tablet devices */
+    .search-input{
+        display: initial;
+    }
+
+    
+    .youtube-header-container{
+        gap: 1rem;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    /* Styles for desktop devices */
+    .search-input{
+        display: initial;
+    }
+
+    .search-input{
+        width: 60%;
+    }
+
+    .youtube-search-container{
+        justify-content: center;
+    }
+
+}
+
+
+/* Video and sidebar section */
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 1.5rem;
+  }
+  
+  .menu-sidebar-container {
+    display: none;
+  }
+  
+  #video-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem; /* Added gap between videos */
+  }
+  
+  .youtube-thumbnail a img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
+  }
+  
+  .youtube-video-detail .video-title {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .video {
+    margin-bottom: 40px;
+  }
+  
+  .user-icon img {
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    object-fit: cover;
+  }
+  
+  .youtube-video-title {
+    line-height: 20px;
+    color: #282828;
+  }
+  
+  .youtube-channel .channel-title {
+    font-size: 0.9rem;
+    margin-left: 10px; /* Adjusted margin */
+  }
+  
+  .youtube-title-link {
+    color: #282828;
+  }
+  
+  .youtube-channel a {
+    color: #000000;
+  }
+  
+  .first-section,
+  .second-section {
+    border-bottom: 1px solid #282828;
+    padding-bottom: 20px;
+  }
+  
+  .second-section,
+  .third-section {
+    padding-top: 20px;
+  }
+  
+  .third-section h4 {
+    margin-bottom: 10px;
+  }
+  
+  .main-nav li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .main-nav li a {
+    font-size: 0.8rem;
+    color: #282828;
+  }
+  
+  .main-nav li i {
+    font-size: 1rem;
+  }
+  
+  .subscriber-pic img {
+    border-radius: 100%;
+  }
+  
+  .main-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  @media (min-width: 720px) {
+    .main-container {
+      grid-template-columns: 1fr 3fr;
+      gap: 1rem;
+    }
+  
+    .menu-sidebar-container {
+      display: block; /* Adjusted display property */
+    }
+  }
+  
+  @media (min-width: 1023px) {
+    #video-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .main-nav li a {
+      font-size: 1rem;
+    }
+  
+    .menu-sidebar-container {
+      display: block; /* Adjusted display property */
+    }
+  }
+  
+  @media (min-width: 1230px) {
+    #video-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .main-container {
+      grid-template-columns: 1fr 5fr;
+      gap: 1rem;
+    }
+  
+    .menu-sidebar-container {
+      display: block; /* Adjusted display property */
+    }
+  }
+  
